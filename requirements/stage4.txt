@@ -1,0 +1,7 @@
+# Stage 4 uses the Stage-3 environment; these are its direct additions.
+numpy>=1.23
+scipy>=1.9
+matplotlib>=3.5
+torch>=1.13
+scikit-learn>=1.1
+tqdm>=4.64

@@ -1,0 +1,9 @@
+# Retain the tested PyTorch build on the compute node.
+numpy>=1.23
+scipy>=1.9
+matplotlib>=3.5
+torch>=1.13
+scikit-learn>=1.1
+blimpy>=2.1
+h5py>=3.8
+hdf5plugin>=4.0

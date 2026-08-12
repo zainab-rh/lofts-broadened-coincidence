@@ -1,0 +1,9 @@
+numpy>=1.23
+scipy>=1.9
+matplotlib>=3.5
+torch>=1.13
+blimpy>=2.1
+setigen>=2.6
+astropy>=5.0
+scikit-learn>=1.1
+tqdm>=4.64

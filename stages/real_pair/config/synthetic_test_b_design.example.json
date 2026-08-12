@@ -1,0 +1,47 @@
+{
+  "format_version": 1,
+  "dataset_role": "locked_synthetic_test_b",
+  "population": "detected_conditioned",
+  "random_seed": 20260804,
+  "widths_fwhm_hz": [10, 20, 30, 50, 75, 100],
+  "profile_families": ["lorentzian", "gaussian", "box"],
+  "target_positive_injections_per_cell": 300,
+  "negative_cases": [
+    "one_station_local",
+    "independent_near_coincident",
+    "same_frequency_incompatible_drift",
+    "same_drift_displaced_frequency",
+    "incompatible_width",
+    "noise_or_rfi_false_hit"
+  ],
+  "injection_implementation": {
+    "repository": "EDIT_INDEPENDENT_INJECTION_REPOSITORY",
+    "git_commit": "EDIT_INJECTION_COMMIT",
+    "command": "EDIT_EXACT_INJECTION_COMMAND",
+    "snr_definition": "EDIT_EXACT_INJECTED_SNR_DEFINITION"
+  },
+  "bliss_search": {
+    "repository": "EDIT_UPSTREAM_BLISS_REPOSITORY",
+    "git_commit": "EDIT_UPSTREAM_BLISS_COMMIT",
+    "command": "EDIT_EXACT_BLISS_COMMAND",
+    "configuration_sha256": "EDIT_BLISS_CONFIGURATION_SHA256",
+    "frequency_reference": "EDIT_START_MIDPOINT_OR_EXPLICIT_EPOCH",
+    "drift_sign_convention": "EDIT_PHYSICAL_DF_DT_CONVENTION",
+    "width_definition": "EDIT_EXACT_WIDTH_DEFINITION",
+    "snr_definition": "EDIT_EXACT_RECOVERED_SNR_DEFINITION"
+  },
+  "separation": {
+    "calibration_seeds_disjoint": true,
+    "calibration_frequency_blocks_disjoint": true,
+    "test_a_not_reused_for_selection": true
+  },
+  "evaluation": {
+    "candidate_set": "station_union_not_intersection",
+    "one_station_detections_retained": true,
+    "threshold": "frozen_stage4_validation_threshold",
+    "primary_auc_minimum": 0.8,
+    "paired_delta_stage4_minus_raw_lower_95_ci": "greater_than_zero",
+    "bootstrap_replicates": 5000,
+    "bootstrap_unit": "independent_resampling_block"
+  }
+}

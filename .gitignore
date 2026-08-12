@@ -1,0 +1,47 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Environments and editors
+.venv/
+venv/
+.env
+.env.*
+!.env.example
+.idea/
+.vscode/
+*~
+
+# Local compute outputs
+training_runs/
+eval_*/
+slurm-*.out
+.matplotlib/
+
+# Large observational data and extracted arrays
+*.fil
+*.h5
+*.hdf5
+*.npy
+*.npz
+
+# Model weights: store externally or with Git LFS
+*.pt
+*.pth
+*.ckpt
+
+# Packaging
+*.zip
+build/
+dist/
+*.egg-info/
+
+# Platform files
+.DS_Store
+Thumbs.db

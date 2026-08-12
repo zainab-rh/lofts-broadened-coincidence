@@ -1,0 +1,32 @@
+{
+  "columns": {
+    "injection_id": "injection_id",
+    "event_id": "event_id",
+    "frequency": "frequency_mhz",
+    "drift": "drift_rate_hz_s",
+    "width": "fwhm_hz",
+    "snr": "injected_snr",
+    "shape": "shape",
+    "pair_label": "pair_label",
+    "case": "case",
+    "population": "population",
+    "evaluation_cell_id": "evaluation_cell_id",
+    "resampling_block_id": "block_id"
+  },
+  "constants": {
+    "observation_id": "LOFTS0199_SE_B_PROXY",
+    "simultaneous_group_id": "synthetic_proxy_group_0001",
+    "station_id": "SE_B_PROXY",
+    "width_definition": "FWHM"
+  },
+  "units": {
+    "frequency": "MHz",
+    "drift": "Hz/s",
+    "width": "Hz"
+  },
+  "frequency_reference": {
+    "mode": "observation_midpoint"
+  },
+  "width_to_fwhm_scale": 1.0,
+  "id_prefix": "SE_B_PROXY:"
+}

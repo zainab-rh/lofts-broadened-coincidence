@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "If you use this repository, please cite it and the associated LOFTS work."
+title: "LOFTS broadened-signal coincidence"
+type: software
+authors:
+  - family-names: Rehman
+    given-names: Zainab
+version: 0.1.0
+date-released: 2026-08-12
+abstract: >-
+  Research software for synthetic and operational evaluation of
+  candidate-conditioned, dual-station coincidence of spectrally broadened
+  LOFAR technosignature candidates.
+keywords:
+  - technosignatures
+  - LOFAR
+  - spectral broadening
+  - contrastive learning
+  - radio astronomy

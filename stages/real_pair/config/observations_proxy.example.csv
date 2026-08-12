@@ -1,0 +1,3 @@
+observation_id,simultaneous_group_id,station_id,filterbank_path,barycentric_status,time_alignment,barycentric_tool,barycentric_version,expected_signed_foff_hz,expected_tsamp_s
+LOFTS0192_SE_A,synthetic_proxy_group_0001,SE_A,/datax2/projects/LOFTS/2025-05-14/LOFTS0192/LOFTS0192.rawspec.0000.fil,synthetic_proxy,normalized_proxy,not_applicable,not_applicable,,
+LOFTS0199_SE_B_PROXY,synthetic_proxy_group_0001,SE_B_PROXY,/datax2/projects/LOFTS/2025-05-21/LOFTS0199/LOFTS0199.rawspec.0000.fil,synthetic_proxy,normalized_proxy,not_applicable,not_applicable,,
