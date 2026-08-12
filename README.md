@@ -79,9 +79,9 @@ environment variables.
    Test-B preregistration before inference, run the retained labelled harness,
    and add the locked outputs without retuning the model or association policy.
 
-See [REPRODUCIBILITY.md](REPRODUCIBILITY.md) for commands and
-[docs/RESULTS_ARTIFACT_CHECKLIST.md](docs/RESULTS_ARTIFACT_CHECKLIST.md) for the
-exact files to copy from the Sweden node.
+See [REPRODUCIBILITY.md](REPRODUCIBILITY.md) for reproduction commands and
+[results/README.md](results/README.md) for the curated machine-readable
+reference artifacts.
 
 ## Scientific conventions
 

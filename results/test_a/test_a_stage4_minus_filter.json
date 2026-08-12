@@ -1,0 +1,50 @@
+{
+  "analysis_role": "locked_posthoc_incremental_value_analysis",
+  "bootstrap": {
+    "ci_level": 0.95,
+    "paired": true,
+    "replicates": 2000,
+    "seed": 20960805,
+    "stratified_by": "shape|width|label|negative_case"
+  },
+  "dataset": "frozen_synthetic_test_a",
+  "format_version": 1,
+  "inference_rerun_for_this_result": false,
+  "interpretation": "Direct paired Stage-4-minus-transparent-filter AUC analysis on already-frozen Synthetic Test A. This is downstream incremental ranking value, not a comparison against BLISS and not real-data performance.",
+  "matched_filter_auc": 0.9747044581618656,
+  "model_or_threshold_tuning_performed": false,
+  "n_pairs": 10800,
+  "pair_export_validation": {
+    "match_per_cell": 300,
+    "max_abs_auc_discrepancy": 0.0,
+    "mismatch_per_cell": 300,
+    "n_cells": 42,
+    "n_pair_rows": 25200,
+    "n_recomputed_auc_comparisons": 168,
+    "pairs_per_cell": 600,
+    "primary_cells": 18,
+    "primary_pair_rows": 10800,
+    "validated": true
+  },
+  "regime": "detected",
+  "sources": {
+    "frozen_evaluator": "stages/stage4/evaluate_stage4.py",
+    "frozen_evaluator_sha256": "6c473e8408c05913830ca77eb475fc620211b60928b514f7a822bdc67b6dec97",
+    "frozen_manifest": "test_manifest.jsonl",
+    "frozen_manifest_sha256": "cc45906dd845d8521ae132f5c47689ed03ea25bae38427238221885a834d7162",
+    "frozen_results_csv": "results/test_a/stage4_width_results.csv",
+    "frozen_results_csv_sha256": "e2083e8e03a12f41c6148a9df14fc237d269c430031e73eddafd3b6fdcc86d4f",
+    "pair_scores": "test_a_pair_scores.jsonl",
+    "pair_scores_sha256": "0dd4267f43b74ddc1adb3ba26b3c0dacf5920adcfece1f4fefae195b263a471a"
+  },
+  "stage4_auc": 0.9931742455418381,
+  "stage4_minus_matched_filter": {
+    "ci_hi": 0.02138732596021954,
+    "ci_lo": 0.015609117798353958,
+    "delta_auc": 0.018469787379972513
+  },
+  "width_interval_hz": [
+    10.0,
+    100.0
+  ]
+}

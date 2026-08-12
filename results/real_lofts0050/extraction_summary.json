@@ -1,0 +1,20 @@
+{
+  "edge_guard_widths": 4.0,
+  "format_version": 1,
+  "include_routes": [
+    "high_resolution_stage4"
+  ],
+  "masked_data_allowed": false,
+  "n_excluded": 0,
+  "n_extracted": 1314,
+  "n_route_selected": 1314,
+  "n_union_entries": 12198,
+  "no_padding_or_wrapping": true,
+  "shape": [
+    16,
+    1024
+  ],
+  "truth_used": false,
+  "union_path": "real_candidate_union.jsonl",
+  "union_sha256": "d289a738b903f4c64deead631f34b378fe5e1fa4f2aa6923291e9450640ec702"
+}

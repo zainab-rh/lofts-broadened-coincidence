@@ -1,0 +1,126 @@
+{
+  "all_headers_declare_barycentric": true,
+  "barycentric_provenance_gate": "pending_upstream_confirmation_engineering_pilot",
+  "contains_normalized_proxy": false,
+  "format_version": 1,
+  "group_geometry": {
+    "LOFTS0050_part000": {
+      "common_bandwidth_hz": 73215793.81940645,
+      "common_frequency_high_hz": 182808193.23120797,
+      "common_frequency_low_hz": 109592399.41180152,
+      "integration_overlap_end_mjd_exclusive": 60592.43775558571,
+      "integration_overlap_seconds": 469.1404208075255,
+      "sample_center_overlap_span_seconds": 451.02102728560567,
+      "source_dec_sigproc": [
+        57.384367779957216,
+        57.384367779957216
+      ],
+      "source_name_agreement": true,
+      "source_names": [
+        "LOFTS0050",
+        "UNKNOWN"
+      ],
+      "source_ra_sigproc": [
+        12.447567175377776,
+        12.447567175377776
+      ],
+      "start_time_difference_seconds": 1.9638044759631157,
+      "time_overlap_last_sample_mjd": 60592.43754587051,
+      "time_overlap_start_mjd": 60592.43232571973
+    }
+  },
+  "n_groups": 1,
+  "n_observations": 2,
+  "observations": [
+    {
+      "barycentric_status": "barycentric",
+      "barycentric_tool": "LOFAR/BL upstream pipeline (Owen-produced products)",
+      "barycentric_version": "pending_Owen_confirmation_2026-08-10",
+      "data_type": 1,
+      "fch1_hz": 102339446.21144022,
+      "file_sha256": "ce55b78e99d778576359cef22507ba4bbf9584c263dce61e92daa942fbfd8207",
+      "filterbank_path": "LOFTS0050.bary.0000_part000.h5",
+      "header_barycentric": 1,
+      "header_fingerprint": "8cdb738d6027dafa08b26d6ca1abca6c736a3790132a10c7dc318cf305f507ea",
+      "machine_id": 20,
+      "n_channels": 27000832,
+      "n_ifs": 1,
+      "n_time": 26,
+      "nbits": 32,
+      "observation_id": "LOFTS0050_IRL_part000",
+      "schema_version": 1,
+      "search_bank_width_channels": [
+        1,
+        3,
+        8,
+        20,
+        50,
+        120
+      ],
+      "search_code_sha256": "50d3c512f68946fd1786ecc122441341382d46ec163ef4c009c40d8692b26c6a",
+      "search_drift_max_hz_s": 0.2,
+      "search_drift_min_hz_s": -0.2,
+      "search_fine_channels_per_coarse": 262144,
+      "search_floor": 20.0,
+      "search_git_commit": "dee329949384f0a0ddb6306d8bbbc2b0db74011a",
+      "search_rolloff_fraction": 0.2,
+      "signed_foff_hz": 2.9802322387695312,
+      "simultaneous_group_id": "LOFTS0050_part000",
+      "source_dec_sigproc": 57.384367779957216,
+      "source_name": "LOFTS0050",
+      "source_ra_sigproc": 12.447567175377776,
+      "start_mjd": 60592.43230299051,
+      "station_id": "IRL",
+      "telescope_id": -1,
+      "time_alignment": "absolute_mjd",
+      "tsamp_s": 18.11939328
+    },
+    {
+      "barycentric_status": "barycentric",
+      "barycentric_tool": "LOFAR/BL upstream pipeline (Owen-produced products)",
+      "barycentric_version": "pending_Owen_confirmation_2026-08-10",
+      "data_type": 1,
+      "fch1_hz": 109592399.41180152,
+      "file_sha256": "778414d498396ead18a641ca55821751ce674403f56381b0f5c7b59e7cdbb8ad",
+      "filterbank_path": "LOFTS0050.bary.0000_part000.h5",
+      "header_barycentric": 1,
+      "header_fingerprint": "70e6e15ab0227a0fdde771b63dfeaac88cd1a61a88d71c219ddce95d03b58256",
+      "machine_id": 20,
+      "n_channels": 27000832,
+      "n_ifs": 1,
+      "n_time": 26,
+      "nbits": 32,
+      "observation_id": "LOFTS0050_SWE_part000",
+      "schema_version": 1,
+      "search_bank_width_channels": [
+        1,
+        3,
+        8,
+        20,
+        50,
+        120
+      ],
+      "search_code_sha256": "50d3c512f68946fd1786ecc122441341382d46ec163ef4c009c40d8692b26c6a",
+      "search_drift_max_hz_s": 0.2,
+      "search_drift_min_hz_s": -0.2,
+      "search_fine_channels_per_coarse": 262144,
+      "search_floor": 20.0,
+      "search_git_commit": "dee329949384f0a0ddb6306d8bbbc2b0db74011a",
+      "search_rolloff_fraction": 0.2,
+      "signed_foff_hz": 2.9729986653744596,
+      "simultaneous_group_id": "LOFTS0050_part000",
+      "source_dec_sigproc": 57.384367779957216,
+      "source_name": "UNKNOWN",
+      "source_ra_sigproc": 12.447567175377776,
+      "start_mjd": 60592.43232571973,
+      "station_id": "SWE",
+      "telescope_id": -1,
+      "time_alignment": "absolute_mjd",
+      "tsamp_s": 18.11939328
+    }
+  ],
+  "station_ids": [
+    "IRL",
+    "SWE"
+  ]
+}

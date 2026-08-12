@@ -1,0 +1,22 @@
+{
+  "amp_enabled": false,
+  "cpu_threads": 4,
+  "dataset_role": "unlabeled_real_pair",
+  "device": "cpu",
+  "elapsed_seconds": 115.59589290618896,
+  "format_version": 1,
+  "integration": "boxcar",
+  "labels_used": false,
+  "n_above_frozen_synthetic_threshold": 261,
+  "n_predicted_matches": null,
+  "n_scored_union_pairs": 1314,
+  "pair_manifest": "pair_manifest.jsonl",
+  "pair_manifest_sha256": "055b2baad80f43e5c9e98360a7fb87b153cee88e379c552b97270bf89986d384",
+  "scientific_boundary": "Real-pair scores are unlabeled rankings. They do not measure AUC, recall, false-positive rate, deployment precision, or end-to-end BLISS completeness; the Test-A threshold is shown only as a frozen synthetic reference.",
+  "stage3_checkpoint": "checkpoints/stage3/model_high_freq_broadened.pth",
+  "stage3_checkpoint_sha256": "ac95373407648d85736e23756a5d8f2e9d507bec29fe476634c4a5a6ef51a02f",
+  "stage4_checkpoint": "checkpoints/stage4/model_stage4_candidate_conditioned.pt",
+  "stage4_checkpoint_sha256": "945698fe5d3ffc108b937ce04611fdc063b5de7c6b9ab8ffa14d8d3361603cf3",
+  "stage4_validation_threshold": 0.4638650417327881,
+  "station_order_symmetry_max_abs_score_difference": 0.0
+}

@@ -1,0 +1,147 @@
+{
+  "catalogs": {
+    "IRL": {
+      "bank_standard_ratio_median": 16.43939226544035,
+      "broadband_rfi_like_fraction": 0.9814842920018212,
+      "n_broadband_rfi_like": 6467,
+      "n_candidates": 6589,
+      "native_width_counts": {
+        "1": 72,
+        "120": 6497,
+        "3": 14,
+        "50": 4,
+        "8": 2
+      },
+      "source": "candidates_irl.jsonl",
+      "source_flag_counts": {
+        "unflagged": 4836,
+        "zero_drift": 1753
+      },
+      "source_sha256": "a8183f34632065f5f1835578c10e3fd1b7bacee9933fcb2fd6192fdef0715651"
+    },
+    "SWE": {
+      "bank_standard_ratio_median": 6.174926824428239,
+      "broadband_rfi_like_fraction": 0.39384232069763303,
+      "n_broadband_rfi_like": 2213,
+      "n_candidates": 5619,
+      "native_width_counts": {
+        "1": 84,
+        "120": 2221,
+        "20": 1854,
+        "3": 17,
+        "50": 1286,
+        "8": 157
+      },
+      "source": "candidates_swe.jsonl",
+      "source_flag_counts": {
+        "unflagged": 1931,
+        "zero_drift": 3688
+      },
+      "source_sha256": "45538f92f038ef947f3dbcc413d3ab752cd4c0b2fc7591d6ccf13f409ceae678"
+    }
+  },
+  "dataset_role": "unlabeled_real_barycentric_pair",
+  "forbidden_claims": [
+    "AUC or classification accuracy on real candidates",
+    "real-candidate recall, precision, FPR, or end-to-end completeness",
+    "astrophysical posterior probability from Stage-4 score",
+    "real technosignature validation"
+  ],
+  "format_version": 2,
+  "inference": {
+    "n_above_frozen_synthetic_threshold": 261,
+    "n_control_scores": 2848,
+    "n_primary_scores": 1314,
+    "threshold_interpretation": "exploratory frozen Synthetic-Test-A reference only"
+  },
+  "inputs": {
+    "control_predictions": "stage4_bliss_predictions.controls.jsonl",
+    "control_predictions_sha256": "a58a6430426e5247374b269c0c3e3d2c65e35f48eba31420730f34bdd08c160a",
+    "primary_predictions": "stage4_bliss_predictions.primary.jsonl",
+    "primary_predictions_sha256": "a6ffab0e83f6b93534543c292ce6dc78e49e2e3e0d4d92def4d3161fd9057c0a",
+    "union": "real_candidate_union.jsonl",
+    "union_sha256": "d289a738b903f4c64deead631f34b378fe5e1fa4f2aa6923291e9450640ec702"
+  },
+  "labels_used": false,
+  "paired_frequency_shift_control": {
+    "controls_per_source_distribution": {
+      "2": 1094,
+      "3": 220
+    },
+    "estimand": "observed score minus mean distant-frequency control score for the same source pair",
+    "method_deltas": {
+      "matched_filter_score": {
+        "ci95": [
+          -0.8208327093023221,
+          0.5814459078925096
+        ],
+        "mean": -0.12580799357108022,
+        "median": -0.14435248265631084,
+        "n": 1314,
+        "n_blocks": 75,
+        "positive_fraction": 0.4916286149162861,
+        "resampling_unit": "common physical-frequency block"
+      },
+      "stage3_corrected_score": {
+        "ci95": [
+          -0.0050473477836490005,
+          0.0024793145410766976
+        ],
+        "mean": -0.0012173043924961697,
+        "median": 0.0017220042645931244,
+        "n": 1314,
+        "n_blocks": 75,
+        "positive_fraction": 0.5098934550989346,
+        "resampling_unit": "common physical-frequency block"
+      },
+      "stage3_raw_score": {
+        "ci95": [
+          -0.00960672410670749,
+          -7.178380571820899e-05
+        ],
+        "mean": -0.004776191533382989,
+        "median": 0.00013376027345657349,
+        "n": 1314,
+        "n_blocks": 75,
+        "positive_fraction": 0.5007610350076104,
+        "resampling_unit": "common physical-frequency block"
+      },
+      "stage4_score": {
+        "ci95": [
+          -0.01815907274998174,
+          0.022928939485304178
+        ],
+        "mean": 0.0017119467522233604,
+        "median": -0.027601497247815132,
+        "n": 1314,
+        "n_blocks": 75,
+        "positive_fraction": 0.423896499238965,
+        "resampling_unit": "common physical-frequency block"
+      }
+    },
+    "n_control_rows": 2848,
+    "n_primary": 1314,
+    "n_primary_with_at_least_one_control": 1314,
+    "uncertainty_resampling_unit": "common physical-frequency block"
+  },
+  "union": {
+    "detection_states": {
+      "IRL_only": 6579,
+      "SWE_only": 5609,
+      "two_station": 10
+    },
+    "n_entries": 12198,
+    "operational_eligibility": {
+      "counterpart_not_searched": 4180,
+      "eligible_one_station_non_detection": 8008,
+      "two_station_detected": 10
+    },
+    "routes": {
+      "high_resolution_stage4": 1314,
+      "high_resolution_stage4_counterpart_not_searched": 505,
+      "mid_resolution_handoff": 9069,
+      "narrowband_or_stage3": 178,
+      "outside_common_filterbank_coverage": 1132
+    }
+  }
+}
