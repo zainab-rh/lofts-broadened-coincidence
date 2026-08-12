@@ -104,13 +104,3 @@ pair arrays, caches, duplicate plots, or exploratory outputs with no role in a
 reported result. Large checkpoints should be distributed through an approved
 artifact store or Git LFS and identified by SHA-256 in the result manifest.
 
-## Current limitations
-
-- Synthetic Test B has not yet been executed with the definitive upstream
-  broadened-signal BLISS script/export.
-- The LOFTS0050 pilot is unlabelled and cannot establish end-to-end detection
-  performance.
-- Background choice, barycentric provenance, station alignment, and upstream
-  search provenance must be recorded for every real observation.
-- The Stage-3 population model is a controlled approximation; conclusions must
-  be conditioned on the injected width, S/N, shape, and background regime.
