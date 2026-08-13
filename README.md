@@ -37,7 +37,6 @@ lofts-broadened-coincidence/
 ├── checkpoints/       # local checkpoint locations; model binaries are not committed
 ├── results/           # machine-readable, curated scientific outputs
 ├── figures/           # publication/presentation figures
-├── docs/              # status, provenance, source selection, and result checklist
 └── scripts/           # repository validation and environment capture
 ```
 
