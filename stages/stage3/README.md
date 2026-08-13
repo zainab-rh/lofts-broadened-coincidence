@@ -1,8 +1,26 @@
 # Stage 3: broadened-signal training and controlled evaluation
 
-Stage 3 extends the original dual-station U-Net with physically broadened
-synthetic injections. Real filterbank data provide the backgrounds; labels and
-injected signal parameters remain synthetic and known.
+Stage 3 adapts the inherited dual-station U-Net comparison framework to
+physically broadened synthetic signals. The underlying dual-station
+architecture is inherited; the work in this stage adds broadened-signal
+injection, training, diagnostics, and controlled evaluation, and produces the
+broadened-aware checkpoint later reused by Stage 4.
+
+Real filterbank observations provide the backgrounds, while labels and injected
+signal parameters remain synthetic and known.
+
+## Stage-3 contribution
+
+The Stage-3 work in this repository focuses on the broadened-signal regime:
+
+- physically broadened synthetic injection into real filterbank backgrounds;
+- width-, S/N-, and profile-stratified evaluation;
+- background-quality and noise-mismatch diagnostics;
+- threshold calibration for downstream threshold-dependent summaries; and
+- a frozen broadened-aware checkpoint for subsequent Stage-4 experiments.
+
+The controlled evaluation remains synthetic by construction, so injection truth
+is available directly during training and evaluation.
 
 ## Files
 
@@ -26,12 +44,12 @@ injected signal parameters remain synthetic and known.
 - Use `recommended_margin_stage3.json` for downstream threshold-dependent
   summaries; AUC-ROC itself is threshold-free.
 
-Minimal entry points:
+Minimal entry points from the repository root:
 
 ```bash
-python train.py --help
-python diagnostics.py --help
-python evaluate_broadening.py --help
+python stages/stage3/train.py --help
+python stages/stage3/diagnostics.py --help
+python stages/stage3/evaluate_broadening.py --help
 ```
 
-Detailed commands and the required result inventory are in the repository root.
+Detailed reproduction commands and the required result inventory are documented in `REPRODUCIBILITY.md` and the repository root.

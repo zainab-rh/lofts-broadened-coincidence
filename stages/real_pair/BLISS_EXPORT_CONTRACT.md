@@ -82,6 +82,23 @@ has been written. Recovery tolerances are separate from
 `association_tolerances`: the former link recovered candidates to injected
 events, whereas the latter associate candidate estimates between stations.
 
+## Audited engineering-smoke convention
+
+The completed one-event paired BLISS engineering smoke used the raw,
+uncollapsed candidate catalogues from the independent Ireland and Sweden
+searches. For that audit:
+
+- candidate frequency was read from BLISS `FREQ_MHZ` at the first observation
+  row;
+- candidate drift was read from `DR_HZ_S`;
+- the corresponding truth frequency was `f_first_MHz`; and
+- a recovery association required no more than 0.3 kHz frequency separation
+  and 0.007 Hz/s drift separation.
+
+These values document the completed engineering smoke only. They do not replace
+the calibration-derived recovery and inter-station association policies that
+must be reviewed and frozen for the full locked Synthetic Test B.
+
 ## Observation modes
 
 ### Real simultaneous data

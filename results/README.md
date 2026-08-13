@@ -44,9 +44,28 @@ Curated outputs from the unlabeled LOFTS0050 Ireland-Sweden real-data pilot.
 - `artifact_checksums.txt` — SHA-256 hashes of the curated public artifacts.
 - `full_run_manifest.sha256` — identifier for the complete frozen run manifest.
 
-The LOFTS0050 pilot is unlabeled. It therefore does not establish real-data
-AUC, accuracy, recall, precision, false-positive rate, astrophysical origin,
-or end-to-end BLISS completeness.
+Because the LOFTS0050 pilot is unlabeled, these outputs support descriptive
+candidate ranking and shifted-control comparisons rather than classification
+metrics.
+
+### `test_b_smoke/`
+
+Curated outputs from the completed one-event paired BLISS engineering smoke on
+separate injected copies of the simultaneous LOFTS0050 Ireland and Sweden
+backgrounds.
+
+- `truth.csv` — injection truth for the two station instances of the smoke event.
+- `recovery.csv` — post-search association summary for the independent station searches.
+- `conventions.json` — field, frequency-epoch, and association conventions used by the smoke.
+- `provenance.sha256` — checksums and source identifiers for the curated smoke bundle.
+
+The 30 Hz signal at 140.3 MHz with +0.06 Hz/s drift was recovered by the
+independent BLISS searches at both stations. This result validates the paired
+injection and blind-search integration path; the full locked multi-event
+Synthetic Test B remains the statistical end-to-end evaluation.
+
+Associated presentation and diagnostic figures are stored under
+`figures/test_b_smoke/`.
 
 ## Large artifacts
 

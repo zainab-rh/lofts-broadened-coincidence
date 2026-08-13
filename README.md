@@ -1,25 +1,26 @@
 # LOFTS broadened-signal coincidence
 
-Research code for testing whether spectrally broadened narrowband candidates
-are consistent between simultaneous LOFAR stations. The repository follows the
-internship work from synthetic signal modelling through candidate-conditioned
-learning and an operational Ireland--Sweden pilot.
+Research code for testing whether spectrally broadened narrowband candidates are consistent between simultaneous LOFAR stations. The repository follows the internship work from synthetic signal modelling through candidate-informed learning, a real Ireland--Sweden LOFTS0050 pilot, and a paired BLISS engineering smoke test.
 
-The central scientific question is whether a candidate reported independently
-at two stations remains recognisably coincident after accounting for its drift
-rate and spectral width. The code therefore keeps three distinct evidence
-levels separate:
+The central scientific question is whether a broadened candidate found at one or both stations is consistent with the same physical event in the simultaneous observation at the other station. The operational candidate set is therefore a union rather than an intersection: one-station BLISS detections are retained and projected to the corresponding physical location in the other observation.
+
+## Evidence overview
 
 | Component | Question | Evidence status |
 |---|---|---|
-| Stage 3 | Can a contrastive U-Net learn coincidence for synthetic broadened signals injected into real backgrounds? | Controlled synthetic evaluation |
-| Stage 4 / Test A | Does candidate-informed de-chirping and frequency integration improve comparison at 10--100 Hz? | Held-out, detected-conditioned synthetic test |
-| Real-pair pilot | Can the frozen pipeline process an operational union of Ireland and Sweden candidates? | Unlabelled engineering/scientific pilot |
-| Synthetic Test B | Does the complete BLISS-to-Stage-4 pipeline recover blind injections? | Harness prepared; results pending the upstream BLISS script/export |
+| Stage 3 | Can the inherited dual-station comparison framework learn coincidence for synthetic broadened signals injected into real backgrounds? | Controlled synthetic evaluation |
+| Stage 4 / Test A | Does candidate-informed preparation plus the learned Stage-4 comparison improve 10--100 Hz cross-station discrimination? | Frozen labelled synthetic evaluation |
+| Real-pair pilot | Can the frozen pipeline process an operational union of Ireland and Sweden candidates? | Completed unlabelled real-data pilot |
+| Test-B engineering smoke | Can a known shared broadened event survive independent BLISS searches in both real station backgrounds? | Completed; recovered independently at both stations |
+| Locked Synthetic Test B | What is end-to-end BLISS -> union -> Stage-4 performance on a blind evaluation population? | Framework implemented; full locked evaluation not run |
 
-The unlabelled real-pair pilot is not a measurement of accuracy, completeness,
-or astrophysical probability. Those claims require the labelled, blind
-Synthetic Test B.
+## Current results
+
+On the frozen detected-conditioned Test-A population, Raw Stage 3 reached an AUC of 0.818, the transparent candidate-informed baseline reached 0.9747, and Stage 4 reached 0.9932. The transparent baseline captures most of the improvement relative to Raw Stage 3, while Stage 4 provides a smaller additional learned improvement on the same frozen pairs.
+
+The LOFTS0050 real-pair workflow has also been run on simultaneous Ireland--Sweden data. Because this pilot is unlabelled, it is used for descriptive ranking and control comparisons rather than classification metrics.
+
+For the engineering smoke, a 30 Hz Lorentzian signal at 140.3 MHz with +0.06 Hz/s drift was injected into separate copies of the real Ireland and Sweden backgrounds. Independent pinned BLISS searches recovered one associated candidate at each station at the expected frequency and nearest searched drift. This validates the paired injection and blind-search path; the larger locked Synthetic Test B remains the statistical end-to-end evaluation.
 
 ## Repository map
 
@@ -30,7 +31,7 @@ lofts-broadened-coincidence/
 ├── stages/
 │   ├── stage3/        # physical injections, training, diagnostics, width sweeps
 │   ├── stage4/        # candidate-conditioned model and frozen Test-A evaluator
-│   └── real_pair/     # BLISS adapters, union, extraction, controls, Test-B harness
+│   └── real_pair/     # BLISS integration, union, extraction, controls and Test-B framework
 ├── tests/             # cross-stage smoke and unit-test entry points
 ├── requirements/      # environment requirements by stage
 ├── checkpoints/       # local checkpoint locations; model binaries are not committed
@@ -64,24 +65,21 @@ environment variables.
 
 ## Typical workflow
 
-1. Screen candidate background observations with
-   `stages/stage3/check_background_quality.py` and retain the scan JSON.
-2. Train Stage 3 on fine-frequency (`*.0000`) backgrounds and calibrate its
-   distance threshold on held-out pairs.
-3. Run the fixed-width and width-by-S/N evaluation; archive the numerical
-   tables together with the plots.
-4. Train and evaluate Stage 4 through
-   `stages/stage4/run_stage4_experiment.sh` using the frozen Stage-3
-   checkpoint.
-5. Run the unlabelled LOFTS0050 real-pair workflow only as a processing and
-   distributional pilot.
-6. When the upstream blind-injection exports become available, freeze the
-   Test-B preregistration before inference, run the retained labelled harness,
-   and add the locked outputs without retuning the model or association policy.
+1. Screen candidate background observations with `stages/stage3/check_background_quality.py` and retain the scan JSON.
 
-See [REPRODUCIBILITY.md](REPRODUCIBILITY.md) for reproduction commands and
-[results/README.md](results/README.md) for the curated machine-readable
-reference artifacts.
+2. Train and evaluate Stage 3 on fine-frequency backgrounds, preserving the selected checkpoint and threshold-calibration artifacts.
+
+3. Run the Stage-4 experiment using the frozen Stage-3 checkpoint. Preserve the Test-A manifest, pair-level results, checkpoint hashes and bootstrap outputs before any post-hoc comparison.
+
+4. Run the LOFTS0050 real-pair workflow using independently produced Ireland and Sweden BLISS candidate catalogues. Construct the candidate union, extract the corresponding views from both stations and apply the frozen Stage-4 comparison.
+
+5. Use shifted, candidate-excluded locations as real-data controls for descriptive score-distribution comparisons.
+
+6. For an engineering check of the upstream search path, use isolated paired injections and independent pinned BLISS searches. Keep injection truth separate from the blind search and retain the recovery table and search provenance.
+
+7. For the full locked Synthetic Test B, derive and freeze the association policy on separate calibration data, freeze the evaluation design and checkpoint hashes, perform blind inference, and link truth only after predictions have been written.
+
+See `REPRODUCIBILITY.md` for reproduction commands and `results/README.md` for the curated machine-readable reference artifacts.
 
 ## Scientific conventions
 

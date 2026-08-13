@@ -1,0 +1,3 @@
+event_id,station,profile,fwhm_Hz,width_ch,strength,f_ref_MHz,t_ref_MJD,f_first_MHz,chan0,drift_Hz_s,drift_ch_per_row,sigma_local,amp_peak,seed,background_block,split,injected,reason
+ev00001,IRL,lorentzian,30.0,10,30.0,140.3,60592.43230299051,140.3,12737448,0.06,0.36479156981701016,442.2658057617198,13267.974172851593,956087734,0,calibration,True,
+ev00001,SWE,lorentzian,30.0,10,30.0,140.3,60592.43230299051,140.3000001178283,10328831,0.06,0.3656791405464919,439.34404130859474,13180.321239257843,956087734,0,calibration,True,

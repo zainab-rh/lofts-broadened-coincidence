@@ -1,0 +1,43 @@
+{
+  "version": "paired-inject-v1",
+  "t_ref_MJD": 60592.43230299051,
+  "profile": "lorentzian",
+  "fwhm_Hz": "30",
+  "strengths": "30",
+  "freqs_MHz": "140.3",
+  "drifts": "0.06",
+  "seed": 2026081201,
+  "assoc_ftol_kHz": 0.3,
+  "assoc_dtol_Hz_s": 0.007,
+  "irl_header": {
+    "fch1": 102.33944621144022,
+    "foff": 2.9802322387695312e-06,
+    "nchans": 27000832,
+    "tstart": 60592.43230299051,
+    "tsamp": 18.11939328,
+    "nifs": 1,
+    "shape": [
+      26,
+      1,
+      27000832
+    ]
+  },
+  "swe_header": {
+    "fch1": 109.59239941180152,
+    "foff": 2.9729986653744596e-06,
+    "nchans": 27000832,
+    "tstart": 60592.43232571973,
+    "tsamp": 18.11939328,
+    "nifs": 1,
+    "shape": [
+      26,
+      1,
+      27000832
+    ]
+  },
+  "frozen_search": {
+    "drift": "0.2",
+    "floor": "20",
+    "bank": "1,3,8,20,50,120"
+  }
+}
