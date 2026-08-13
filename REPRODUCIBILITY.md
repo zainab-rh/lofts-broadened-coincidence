@@ -152,8 +152,7 @@ This smoke validates the paired injection and independent BLISS-recovery path. I
 
 ### 6.2 Locked Synthetic Test B
 
-The full locked Test B remains the end-to-end statistical evaluation. Follow `docs/TEST_B_HANDOFF.md`.
-
+The full locked Test B remains the end-to-end statistical evaluation. 
 The required order is:
 
 1. estimate association tolerances on a separate calibration population;
